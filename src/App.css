@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Roboto', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*****Header******/
+.header-container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: right;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: rgb(80,80,80);
+  background: radial-gradient(circle, rgba(80,80,80,1) 0%, rgba(0,0,0,1) 100%);
+  box-shadow: 0px 10px 5px 0px rgba(75, 75, 75, 0.75);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(199,183,183,0.75);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(199,183,183,0.75);
+  padding-right: 50px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:999;
+}
+.titleLemaison {
+  font-size: 25px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.75);
+  opacity: 0.8;
+  left: -200px;
+  transition: all 500ms linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  color: white;
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(100, 100, 100, .3);
+  text-align: center;
+}
+
+.header-container .toggle-btn {
+  position: absolute;
+  left: 70px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.header-container .toggle-btn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+  border: 3px solid white;
+  color: white;
+}
+
+/*********Main**********/
+
+.container {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-panel {
+  width: 38%;
+  height: 40vh;
+  border: solid blue 1px;
+  margin: 30px 10px 10px 10px;
+  box-shadow: -1px -9px 12px 8px rgb(133, 132, 132), 5px 5px 10px 1px #000;
+}
+
+.container-mini {
+  margin: 30px 10px 0px 10px; 
+  width: 25%;
+  height: 20vh;
+  box-shadow: -1px -9px 12px 8px rgb(133, 132, 132), 5px 5px 10px 1px #000; 
+}
+
+.btn-next {
+  display: block;
+  width: 20%;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 28px 5px #616161; 
+  box-shadow: 0px 0px 28px 5px #616161;
+}
+
+/*********Footer**********/
+
+.div-derechos {
+  text-align: center;
+  border-top:solid 2px #424242;
+  background: radial-gradient(circle, rgba(80,80,80,1) 0%, rgba(0,0,0,1) 100%);
+  box-shadow: 0px 10px 5px 0px rgba(75, 75, 75, 0.75);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(199,183,183,0.75);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(199,183,183,0.75);
+  margin: auto;
+  padding: 10px;
+  margin: auto;
+}
+
+.div-derechos p {
+  color: #ffffff
+}
+
+@media (min-width:768px) {
+/*********Nav**********/
+  .header-nav li {
+    font-size: 18px;
   }
-  to {
-    transform: rotate(360deg);
+  .titleLemaison1 {
+    display: block;
+  }  
+
+/*********Footer**********/
+  
+      .footer-container {
+          width: 75%;
+      }
   }
+
+@media (min-width:1200px) {      
+
 }
