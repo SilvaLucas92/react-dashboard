@@ -28,11 +28,13 @@ function Nav() {
                         <li  className='li-nav'><Link to="/users">Users</Link></li>
                     </ul>
                 </div>
+    
             <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route path="/products" component={Products}></Route>
             <Route path="/users" component={Users}></Route>
             <Route component={NotFound} />
+            
             </Switch>
     </header> 
     )

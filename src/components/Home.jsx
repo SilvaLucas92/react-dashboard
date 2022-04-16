@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Users from './Users';
 import Products from './Products';
-
+import TopBar from './TopBar';
+import Categories from './Categories';
 function Home() {
     const [products, setProducts] = useState([]);
     const [ isLoading, setIsLoading ] = useState(false);
@@ -17,40 +18,13 @@ function Home() {
     }, [])
 
     return(
-        <main>
-            
-        <div className='container'> 
-            <div className='container-mini'>
-                {isLoading.length < 0 && <p>Cargando..</p> }
-                { !isLoading && products &&(                
-                <> 
-                <h5>Cantidad de Products: </h5>
-                <span>{products.count}</span>
-                </> )  
-                }
+        <main>           
+            <div className='container'> 
+                <TopBar isLoading={isLoading} products={products}/>                
+                <Products products={products}/>
+                <Users />
+                <Categories />
             </div>
-            <div className='container-mini'>
-                {isLoading.length < 0 && <p>Cargando..</p> }
-                { !isLoading && products &&(                
-                <> 
-                <h5>Cantidad de Products: </h5>
-                <span>{products.count}</span>
-                </> )  
-                }
-            </div>
-            <div className='container-mini'>
-                {isLoading.length < 0 && <p>Cargando..</p> }
-                { !isLoading && products &&(                
-                <> 
-                <h5>Cantidad de Products: </h5>
-                <span>{products.count}</span>
-                </> )  
-                }
-            </div>
-                
-        <Products productos={products}/>
-        
-        </div>
         </main>
     )
 }
