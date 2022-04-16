@@ -11,12 +11,8 @@ body{
   display: flex;
   justify-content: right;
   align-items: center;
-  background: rgb(80,80,80);
-  background: radial-gradient(circle, rgba(80,80,80,1) 0%, rgba(0,0,0,1) 100%);
-  box-shadow: 0px 10px 5px 0px rgba(75, 75, 75, 0.75);
-  -webkit-box-shadow: 0px 10px 5px 0px rgba(199,183,183,0.75);
-  -moz-box-shadow: 0px 10px 5px 0px rgba(199,183,183,0.75);
-  padding-right: 50px;
+  background-color: black;
+  padding: 10px;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -24,6 +20,7 @@ body{
   right: 0;
   z-index:999;
 }
+
 .titleLemaison {
   font-size: 25px;
   color: white;
@@ -31,10 +28,7 @@ body{
 
 #sidebar {
   position: fixed;
-  width: 200px;
-  height: 100%;
-  background: rgba(27, 27, 27, 0.75);
-  opacity: 0.8;
+  background: black;
   left: -200px;
   transition: all 500ms linear;
 }
@@ -53,8 +47,8 @@ body{
 
 .header-container .toggle-btn {
   position: absolute;
-  left: 70px;
-  top: 15px;
+  left: 20px;
+  top: 20px;
   cursor: pointer;
 }
 
@@ -70,25 +64,33 @@ body{
 /*********Main**********/
 
 .container {
-  margin-top: 70px;
+  margin-top: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .container-panel {
-  width: 38%;
-  height: 40vh;
-  border: solid blue 1px;
+  width: 80%;
   margin: 30px 10px 10px 10px;
-  box-shadow: -1px -9px 12px 8px rgb(133, 132, 132), 5px 5px 10px 1px #000;
+  border-radius: 10px;
+  box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
+  -webkit-box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
+}
+.container-panel ul {
+  list-style: none;
+  padding: 5px;
 }
 
 .container-mini {
   margin: 30px 10px 0px 10px; 
-  width: 25%;
-  height: 20vh;
-  box-shadow: -1px -9px 12px 8px rgb(133, 132, 132), 5px 5px 10px 1px #000; 
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
+  -webkit-box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
 }
 
 .btn-next {
@@ -120,21 +122,28 @@ body{
 }
 
 @media (min-width:768px) {
-/*********Nav**********/
-  .header-nav li {
-    font-size: 18px;
+
+  .header-container h1 {
+      font-size: 40px;
   }
-  .titleLemaison1 {
-    display: block;
-  }  
-
-/*********Footer**********/
-  
-      .footer-container {
-          width: 75%;
-      }
+  .nav-bar span {
+      font-size: 25px;
   }
-
-@media (min-width:1200px) {      
-
+  .ul-nav li {
+      font-size: 18px;
+  }
+  .container-mini {
+    width: 40%;
+  }
+  .container-panel {
+    width: 90%;
+  }
+}
+@media (min-width:1200px) {
+  .header-container h1 {
+    font-size: 40px;
+}
+  .container-mini {
+    width: 30%;
+}
 }

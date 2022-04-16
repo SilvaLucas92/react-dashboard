@@ -1,20 +1,20 @@
 import React from "react";
-function Products() {
-    return(
-        <div className='container'>
-            <div className='container-panel'>
-                <h1>Soy prod1!</h1>
-            </div>
-            <div className='container-panel'>
-                <h1>Soy prod2!</h1>
-            </div>
-            <div className='container-panel'>
-                <h1>Soy prod3!</h1>
-            </div>
-            <div className='container-panel'>
-                <h1>Soy prod4!</h1>
-            </div>
+
+function Products({productos}) {
+    return (
+        <div className='container-panel'>
+        {/* {!productos  && <p>Cargando..</p> }
+        {productos && 
+            productos.data.map((oneCharacter, i) => {
+                return  <ul>
+                            <li key= {i} > 
+                                <h4>{ oneCharacter.name }: </h4>
+                                <span>{ oneCharacter.description }</span>
+                            </li>  
+                        </ul>                               
+        })                                                
+        } */}
         </div>
-    )
+    )   
 }
 export default Products;
