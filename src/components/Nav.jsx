@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import Home from './Home';
 import Products from './Products';
 import Users from './Users';
+import ProductsDetail from './ProductsDetail'
 import {Route, Link, Switch} from 'react-router-dom';
 import NotFound from './NotFound';
 function Nav() {
@@ -31,6 +32,7 @@ function Nav() {
     
             <Switch>
             <Route exact path="/" component={Home}></Route>
+            <Route path="/products/:id" component={ProductsDetail}></Route>
             <Route path="/products" component={Products}></Route>
             <Route path="/users" component={Users}></Route>
             <Route component={NotFound} />
