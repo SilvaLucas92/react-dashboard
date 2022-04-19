@@ -8,7 +8,7 @@ function NotFound(){
             <div className='container'> 
                 <div className="text-center">
                     <h1>404 Not Found</h1>
-                    <img src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+                    <img src={imagenFondo} alt=" 404-Error "/>
                 </div>
             </div>
         <Div />

@@ -5,6 +5,7 @@ import Users from './Users';
 import ProductsDetail from './ProductsDetail'
 import {Route, Link, Switch} from 'react-router-dom';
 import NotFound from './NotFound';
+import LastPdt from './LastPdt';
 function Nav() {
     const btn =  useRef();
     const showSideNav = () => {
@@ -25,8 +26,9 @@ function Nav() {
                             DH dashboard
                         </li>
                         <li className='li-nav'><Link to="/">Home</Link></li>
-                        <li  className='li-nav'><Link to="/products">Products</Link></li>
-                        <li  className='li-nav'><Link to="/users">Users</Link></li>
+                        <li className='li-nav'><Link to="/products">Products</Link></li>
+                        <li className='li-nav'><Link to="/users">Users</Link></li>
+                        <li className='li-nav'><Link to="/lastPdt">Last Product</Link></li>
                     </ul>
                 </div>
     
@@ -35,6 +37,7 @@ function Nav() {
             <Route path="/products/:id" component={ProductsDetail}></Route>
             <Route path="/products" component={Products}></Route>
             <Route path="/users" component={Users}></Route>
+            <Route path="/lastPdt" component={LastPdt}></Route>
             <Route component={NotFound} />
             
             </Switch>

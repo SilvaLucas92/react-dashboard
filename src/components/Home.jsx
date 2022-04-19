@@ -3,19 +3,20 @@ import Users from './Users';
 import Products from './Products';
 import TopBar from './TopBar';
 import Categories from './Categories';
-import Div from './Div';
+import LastPdt from './LastPdt';
 function Home() {
 
     return(
-        <main>
-            <Div />           
+        <main>           
             <div className='container'> 
-                <TopBar />                
+                <TopBar /> 
+            </div>  
+            <div  className='container-main'>             
                 <Products/>
+                <LastPdt />
                 <Users />
                 <Categories />
-            </div>
-            <Div />
+            </div>  
         </main>
     )
 }

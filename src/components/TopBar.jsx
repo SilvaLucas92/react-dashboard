@@ -1,6 +1,5 @@
 
 import React, {useState, useEffect} from "react";
-import Div from "./Div";
 function TopBar() {
     const [products, setProducts] = useState([]);
     const [ isLoading, setIsLoading ] = useState(false);
@@ -15,14 +14,13 @@ function TopBar() {
     }, [])
     return (
         <>
-        <Div />
         <div className='container'>        
             <div className='container-mini'>
                 {isLoading.length < 0 && <p>Cargando..</p> }
                 { !isLoading && products &&(                
                 <> 
                 <h5>Cantidad de Products: </h5>
-                <span>{products.count}</span>
+                <span> {products.count}</span>
                 </> )  
                 }
             </div>
@@ -30,8 +28,8 @@ function TopBar() {
                 {isLoading.length < 0 && <p>Cargando..</p> }
                 { !isLoading && products &&(                
                 <> 
-                <h5>Cantidad de Categorias: </h5>
-                <span>{products.countAllCat}</span>
+                <h5>Cantidad de Categorias:  </h5>
+                <span> {products.countAllCat}</span>
                 </> )  
                 }
             </div>
@@ -39,8 +37,8 @@ function TopBar() {
                 {isLoading.length < 0 && <p>Cargando..</p> }
                 { !isLoading && products &&(                
                 <> 
-                <h5>Cantidad de Products: </h5>
-                <span>{products.count}</span>
+                <h5>Cantidad de usuarios: </h5>
+                <span>212121</span>
                 </> )  
                 }
             </div>

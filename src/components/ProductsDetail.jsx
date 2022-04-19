@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import Div from "./Div";
 function ProductsDetail(props) {
     const [product, setProduct] = useState();
     let id = props.match.params.id;
@@ -11,19 +10,21 @@ function ProductsDetail(props) {
             // {console.log(data)})
             setProduct(data))
         .catch(err => console.log(err))
-    }, [])
-
+    }, )
     return (
-            <>
-                <Div />
+            <>        
+                <div className='container-panel'>
                 {!product && <p> Cargando.... </p>}
                 {product && (
                     <>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati esse, eum distinctio eveniet voluptatibus perferendis animi officiis dolor aspernatur incidunt aliquam delectus dignissimos modi fuga maiores corporis quo placeat quidem!</p>
-                    <h1>{product.data.name}</h1>
+                        <img src={'/images/' + product.data.image} alt="foto" />
+                        <h2>Detalle del producto</h2>
+                        <h5>{product.data.name}</h5>
+                        <p>{product.data.description}</p>
+                        <span>$ {product.data.price}</span>
                     </>
                 )}
-                <Div />
+                </div>
             </>
     )
 }

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Route, Link, Switch} from 'react-router-dom';
-import Div from "./Div";
+import {Link} from 'react-router-dom';
 function Products() {
     const [products, setProducts] = useState([]);
 
@@ -13,23 +12,18 @@ function Products() {
         .catch(err => console.log(err))
     }, [])
     return (
-        <>
-        <Div />
-        <div className='container'>       
+        <>       
             <div className='container-panel'>
+                <h2>Lista de Productos</h2>
                 {!products && <p>Cargando..</p> }
                 {products && (                 
                     (products.data || []).map((pdt, i) => {
-                        return <> <h5 key={i}>Cantidad de Products: {pdt.name} </h5>
+                        return <>   <h5 key={i}> {pdt.name} </h5>
                                     <p><Link to={"/products/{pdt.id}"}>ver mas</Link></p></>
                     })
                 )  
                 }   
-                                    {/* <Route path="/products/:id" component={ProductsDetail}>
-                                    </Route> */}
-            </div>
-        </div>
-        <Div />      
+            </div>   
         </>                  
     )
 }
