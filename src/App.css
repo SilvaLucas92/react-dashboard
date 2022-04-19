@@ -4,6 +4,8 @@
 
 body{
   font-family: 'Roboto', sans-serif;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 h5, h2 {
@@ -19,12 +21,12 @@ h5, h2 {
   align-items: center;
   background-image: linear-gradient(to right, #0f2544, #0e223e, #0d1f38, #0c1c32, #0b192c);
   padding: 10px;
-  /* overflow: hidden;
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index:999; */
+  z-index:999;
 }
 
 .titleLemaison {
@@ -39,11 +41,12 @@ h5, h2 {
   left: -1000px;
   transition: all 500ms linear;
   height: 100%;
-  width: 35%;
+
 }
 
 #sidebar.active {
   left: 0px;
+  padding-top: 0px;
 }
 
 #sidebar ul li {
@@ -93,7 +96,7 @@ h5, h2 {
 
 .container-panel {
   width: 80%;
-  margin: 20px  auto 20px auto;
+  margin: 25px  auto 20px auto;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0px -7px 17px 9px rgba(0,0,0,0.33);
@@ -155,12 +158,14 @@ h5, h2 {
 .div-derechos {
   text-align: center;
   background-image: linear-gradient(to right, #0f2544, #0e223e, #0d1f38, #0c1c32, #0b192c);
+  height: 100px;
   margin: auto;
   padding: 10px;
-  margin: auto;
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
+  position: fixed;
 }
 
 .div-derechos p {
@@ -187,9 +192,11 @@ h5, h2 {
   }
   .container-mini {
     width: 40%;
+    margin-top: 35px;
   }
   .container-panel {    
     width: 40%;
+    margin-top: 35px;
   }
   .container-panel a{    
     font-size: 12px;
@@ -204,10 +211,6 @@ h5, h2 {
   .container-panel ul li, p {    
     font-size: 18px;
   }
-/* 
-  .container-panel a{
-    font-size: 18px;
-  } */
 
   .header-container .toggle-btn {
     top: 35px;
@@ -216,31 +219,36 @@ h5, h2 {
     display: flex;    
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
   }
+
 
 }
 @media (min-width:1200px) {
-  .titleLemaison {
-    font-size: 40px;
-    margin-right: 35px;
-}
-  .container-mini {
-    width: 30%;
-}
-.container-panel a{    
-  font-size: 15px;
-}
-.container-panel, .container-mini h5 {    
-  font-size: 25px;
-}
-.container-panel h2 {    
-  font-size: 28px;
-}
-#sidebar ul li {
-  font-size: 25px;
-}
-#sidebar ul li a{
-  font-size: 20px;
-}
+    .titleLemaison {
+      font-size: 40px;
+      margin-right: 35px;
+  }
+    .container-mini {
+      width: 30%;
+  }
+  .container-panel a{    
+    font-size: 15px;
+  }
+  .container-panel, .container-mini h5 {    
+    font-size: 25px;
+  }
+  .container-panel h2 {    
+    font-size: 28px;
+  }
+  #sidebar ul li {
+    font-size: 25px;
+  }
+  #sidebar ul li a{
+    font-size: 20px;
+  }
+  .container-main {
+    width: 90%;
+  }
 
 }

@@ -16,7 +16,7 @@ function Categories() {
             {products.countByCat && 
                 <>
                 <div className='container-panel'>
-                    <h2>Lista de Categorias</h2>    
+                    <h2>Cantidad de Productos por categoria: </h2>    
                     <ul>
                         <li>Mesas: {products.countByCat.mesas}</li>
                         <li>Escritorios: {products.countByCat.escritorios}</li>

@@ -19,7 +19,7 @@ function Products() {
                 {products && (                 
                     (products.data || []).map((pdt, i) => {
                         return <>   <h5 key={i}> {pdt.name} </h5>
-                                    <p><Link to={"/products/{pdt.id}"}>ver mas</Link></p></>
+                                    <p><Link to={`/products/${pdt.id}`}>ver mas</Link></p></>
                     })
                 )  
                 }   
