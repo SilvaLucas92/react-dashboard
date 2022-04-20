@@ -41,12 +41,12 @@ h5, h2 {
   left: -1000px;
   transition: all 500ms linear;
   height: 100%;
+  margin-top: -25px;
 
 }
 
 #sidebar.active {
   left: 0px;
-  padding-top: 0px;
 }
 
 #sidebar ul li {
@@ -184,6 +184,11 @@ h5, h2 {
   .ul-nav li {
       font-size: 16px;
   }
+
+  #sidebar {
+    margin-top: -3px;
+  }
+
   #sidebar ul li {
     font-size: 20px;
   }

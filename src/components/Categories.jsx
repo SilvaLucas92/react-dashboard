@@ -11,11 +11,11 @@ function Categories() {
         .catch(err => console.log(err))
     }, [])
     return (
-        <>      
+        <>
+        <div className='container-panel'>
             {!products.countByCat && <p>Cargando..</p> }
             {products.countByCat && 
                 <>
-                <div className='container-panel'>
                     <h2>Cantidad de Productos por categoria: </h2>    
                     <ul>
                         <li>Mesas: {products.countByCat.mesas}</li>
@@ -24,10 +24,9 @@ function Categories() {
                         <li>Sillones: {products.countByCat.sillones}</li>
                         <li>Estanterias: {products.countByCat.estanterias}</li>
                     </ul>
-                </div>  
             </>} 
-        </>
-
+    </div>    
+        </> 
     )
 }
 export default Categories;
