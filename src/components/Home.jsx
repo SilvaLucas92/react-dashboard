@@ -12,10 +12,10 @@ function Home() {
                 <TopBar /> 
             </div>  
             <div  className='container-main'>             
-                <Products/>
                 <LastPdt />
-                <Users />
                 <Categories />
+                <Users />
+                <Products/>
             </div>  
         </main>
     )

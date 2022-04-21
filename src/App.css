@@ -95,6 +95,7 @@ h5, h2 {
 }
 
 .container-panel {
+  border-left: 15px solid #94ffe6;
   width: 80%;
   margin: 25px  auto 20px auto;
   border-radius: 10px;
@@ -123,6 +124,7 @@ h5, h2 {
   margin: 10px; 
   width: 80%;
   border-radius: 10px;
+  border-left: 15px solid #94ffe6;
   padding: 10px;
   display: flex;
   justify-content:left;
