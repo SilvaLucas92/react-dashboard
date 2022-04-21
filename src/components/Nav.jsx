@@ -6,6 +6,7 @@ import ProductsDetail from './ProductsDetail'
 import {Route, Link, Switch} from 'react-router-dom';
 import NotFound from './NotFound';
 import LastPdt from './LastPdt';
+import UserDetail from './UserDetail';
 function Nav() {
     const btn =  useRef();
     const showSideNav = () => {
@@ -35,6 +36,7 @@ function Nav() {
             <Switch>
             <Route exact path="/" component={Home}></Route>
             <Route path="/products/:id" component={ProductsDetail}></Route>
+            <Route path="/users/:id" component={UserDetail}></Route>
             <Route path="/products" component={Products}></Route>
             <Route path="/users" component={Users}></Route>
             <Route path="/lastPdt" component={LastPdt}></Route>

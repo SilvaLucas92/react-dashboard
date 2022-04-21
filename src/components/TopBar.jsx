@@ -1,6 +1,6 @@
 
 import React, {useState, useEffect} from "react";
-function TopBar() {
+function TopBar({users}) {
     const [products, setProducts] = useState([]);
     const [ isLoading, setIsLoading ] = useState(false);
     useEffect(() => {
@@ -12,6 +12,7 @@ function TopBar() {
             setProducts(data)})
         .catch(err => console.log(err))
     }, [])
+
     return (
         <>
         <div className='container'>        
@@ -35,10 +36,10 @@ function TopBar() {
             </div>
             <div className='container-mini'>
                 {isLoading.length < 0 && <p>Cargando..</p> }
-                { !isLoading && products &&(                
+                { !isLoading && users &&(                
                 <> 
                 <h5>Cantidad de usuarios: </h5>
-                <span>212121</span>
+                <span>{users.count}</span>
                 </> )  
                 }
             </div>
