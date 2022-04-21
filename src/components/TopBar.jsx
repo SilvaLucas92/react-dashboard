@@ -35,8 +35,8 @@ function TopBar({users}) {
                 }
             </div>
             <div className='container-mini'>
-                {isLoading.length < 0 && <p>Cargando..</p> }
-                { !isLoading && users &&(                
+                {!users < 0 && <p>Cargando..</p> }
+                { users &&(                
                 <> 
                 <h5>Cantidad de usuarios: </h5>
                 <span>{users.count}</span>

@@ -7,13 +7,11 @@ import LastPdt from './LastPdt';
 import React, {useState, useEffect} from "react";
 function Home() {
     const [users, setUsers] = useState([]);
-    const [ isLoading, setIsLoading ] = useState(false);
     useEffect(() => {
         console.log('didMount')
         fetch('http://localhost:8000/api/users')
         .then(response => response.json())
         .then(data => {
-            setIsLoading(false);
             setUsers(data)})
         .catch(err => console.log(err))
     }, [])
@@ -23,10 +21,10 @@ function Home() {
                 <TopBar users={users}/> 
             </div>  
             <div  className='container-main'>             
-                {/* <LastPdt /> */}
+                <Users />
+                <Products/>
+                <LastPdt />
                 <Categories />
-                {/* <Users /> */}
-                {/* <Products/> */}
             </div>  
         </main>
     )
